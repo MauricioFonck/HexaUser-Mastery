@@ -1,8 +1,15 @@
 FROM php:8.2-apache
 
-# Instalar extensiones necesarias para MySQL y reescritura de Apache
-RUN docker-php-ext-install pdo pdo_mysql \
+# Instalar dependencias del sistema
+RUN apt-get update && apt-get install -y \
+    git \
+    unzip \
+    libzip-dev \
+    && docker-php-ext-install pdo pdo_mysql zip \
     && a2enmod rewrite
+
+# Instalar Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Ajustar el DocumentRoot a la carpeta public
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
