@@ -10,9 +10,9 @@
 ## 🖼️ Visual Showcase
 Experimenta una interfaz de usuario premium diseñada con una estética de vanguardia (*Glassmorphism*).
 
-| Inicio del Sistema | Gestión de Usuarios |
-|:---:|:---:|
-| ![Home Screenshot](img/Captura%20de%20pantalla%202026-05-05%20224916.png) | ![Users Screenshot](img/Captura%20de%20pantalla%202026-05-05%20225041.png) |
+| Inicio del Sistema | Gestión de Usuarios | Creación de Perfiles |
+|:---:|:---:|:---:|
+| ![Home Screenshot](img/Captura%20de%20pantalla%202026-05-05%20224916.png) | ![Users Screenshot](img/Captura%20de%20pantalla%202026-05-05%20225041.png) | ![Create User Screenshot](img/Captura%20de%20pantalla%202026-05-05%20225950.png) |
 
 ---
 
@@ -105,9 +105,12 @@ docker-compose exec app composer install
 ## 🧪 Suite de Pruebas Profesionales
 
 Garantiza la estabilidad del sistema ejecutando nuestra suite completa de PHPUnit:
+
 ```bash
 docker-compose exec app vendor/bin/phpunit
 ```
+
+![Tests Screenshot](img/Captura%20de%20pantalla%202026-05-05%20230132.png)
 
 ---
 *Desarrollado con el compromiso de crear software excepcional.*
