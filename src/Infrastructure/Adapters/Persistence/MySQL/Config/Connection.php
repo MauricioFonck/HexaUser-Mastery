@@ -12,18 +12,18 @@ final class Connection
     private string $charset;
 
     public function __construct(
-        string $host = 'localhost',
+        string $host = 'db',
         int $port = 3306,
         string $dbName = 'hexa_user_mastery',
         string $user = 'root',
-        string $password = '',
+        string $password = 'secret',
         string $charset = 'utf8mb4'
     ) {
-        $this->host     = $host;
-        $this->port     = $port;
-        $this->dbName   = $dbName;
-        $this->user     = $user;
-        $this->password = $password;
+        $this->host     = getenv('DB_HOST') ?: $host;
+        $this->port     = (int)(getenv('DB_PORT') ?: $port);
+        $this->dbName   = getenv('DB_NAME') ?: $dbName;
+        $this->user     = getenv('DB_USER') ?: $user;
+        $this->password = getenv('DB_PASS') ?: $password;
         $this->charset  = $charset;
     }
 
