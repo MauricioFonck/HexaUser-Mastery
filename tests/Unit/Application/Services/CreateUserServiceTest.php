@@ -58,7 +58,13 @@ final class CreateUserServiceTest extends TestCase
             'USER'
         );
 
-        $existingUser = $this->createMock(UserModel::class);
+        $existingUser = UserModel::create(
+            new UserId('123'),
+            new UserName('Juan Perez'),
+            new UserEmail('juan@example.com'),
+            UserPassword::fromPlainText('password123'),
+            'USER'
+        );
         $this->getUserByEmailPort->method('getByEmail')->willReturn($existingUser);
 
         $this->expectException(UserAlreadyExistsException::class);

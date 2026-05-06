@@ -27,3 +27,4 @@ Thumbs.db
 # Project Specific
 *Docs/
 *Skill/
+*.phpunit.cache/

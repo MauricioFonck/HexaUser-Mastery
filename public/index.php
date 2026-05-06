@@ -5,6 +5,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/../src/Common/DependencyInjection.php';
 
 DependencyInjection::boot();
+Flash::start();
 
 $route = $_GET['route'] ?? 'home';
 $method = $_SERVER['REQUEST_METHOD'];

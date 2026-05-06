@@ -85,6 +85,9 @@ final class ClassLoader
             'UserWebMapper'          => $baseDir . '/Infrastructure/Entrypoints/Web/Mapper/UserWebMapper.php',
             'Flash'                  => $baseDir . '/Infrastructure/Presentation/Flash.php',
             'View'                   => $baseDir . '/Infrastructure/Presentation/View.php',
+
+            // Tests
+            'IntegrationTestCase'    => dirname($baseDir) . '/tests/Integration/IntegrationTestCase.php',
         ];
     }
 }
